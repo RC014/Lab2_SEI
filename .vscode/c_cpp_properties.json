@@ -1,0 +1,70 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/include",
+                "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/src",
+                "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/lib/os_seq",
+                "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/lib/app_lab_2_1",
+                "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/lib/dd_led",
+                "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/lib/dd_button",
+                "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/lib/dd_serial_stdio",
+                "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/.pio/libdeps/megaatmega2560/Keypad/src",
+                "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/.pio/libdeps/megaatmega2560/LiquidCrystal_I2C",
+                "C:/Users/stefan/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "C:/Users/stefan/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "C:/Users/stefan/.platformio/packages/framework-arduino-avr/variants/mega",
+                "C:/Users/stefan/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "C:/Users/stefan/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "C:/Users/stefan/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "C:/Users/stefan/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/include",
+                    "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/src",
+                    "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/lib/os_seq",
+                    "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/lib/app_lab_2_1",
+                    "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/lib/dd_led",
+                    "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/lib/dd_button",
+                    "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/lib/dd_serial_stdio",
+                    "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/.pio/libdeps/megaatmega2560/Keypad/src",
+                    "C:/Users/stefan/OneDrive/Documents/PlatformIO/Projects/Lab2/.pio/libdeps/megaatmega2560/LiquidCrystal_I2C",
+                    "C:/Users/stefan/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "C:/Users/stefan/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "C:/Users/stefan/.platformio/packages/framework-arduino-avr/variants/mega",
+                    "C:/Users/stefan/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "C:/Users/stefan/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "C:/Users/stefan/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "C:/Users/stefan/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60119",
+                "ARDUINO_AVR_MEGA2560",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega2560__",
+                ""
+            ],
+            "cStandard": "gnu11",
+            "cppStandard": "gnu++11",
+            "compilerPath": "C:/Users/stefan/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
+            "compilerArgs": [
+                "-mmcu=atmega2560",
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
