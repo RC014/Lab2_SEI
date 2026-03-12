@@ -1,9 +1,9 @@
 #include "app_lab_2_2.h"
 #include <Arduino.h>
-#include "srv_serial_stdio/srv_serial_stdio.h"
+#include "../dd_serial_stdio/dd_serial_stdio.h"
 #include <Arduino_FreeRTOS.h>
-#include "led/led.h"
-#include "button/button.h"
+#include "../dd_led/dd_led.h"
+#include "../dd_button/dd_button.h"
 #include "semphr.h"
 #include "app_lab_2_2_task_1.h"
 #include "app_lab_2_2_task_2.h"

@@ -1,35 +1,21 @@
 #include "dd_serial_stdio.h"
-#include "Arduino.h"
-#include "stdio.h"
-#include <stdarg.h>
-extern SemaphoreHandle_t xPrintfMutex;
-int srv_serial_get_char(FILE *f)
+int ddSerialGetChar(FILE *f)
 {
-while (!Serial.available())
+while (!Serial.available()) // asteptam pana cand sunt date disponibile
 ;
-return Serial.read();
+return Serial.read(); // returnam caracterul citit
 }
-int srv_serial_put_char(char ch, FILE *f)
+int ddSerialPutChar(char ch, FILE *f)
+
 {
-return Serial.write(ch);
+return Serial.write(ch); // scriem caracterul pe seriala
 }
-void safe_printf(const char* format, ...) {
-if (xPrintfMutex != NULL) {
-if (xSemaphoreTake(xPrintfMutex, portMAX_DELAY) == pdTRUE) {
-va_list args;
-va_start(args, format);
-vprintf(format, args);
-va_end(args);
-xSemaphoreGive(xPrintfMutex);
-}
-}
-}
-void srv_serial_stdio_setup()
+void ddSerialStdioSetup()
 {
-Serial.begin(9600);
-FILE *srv_serial_stream = fdevopen(srv_serial_put_char,
-srv_serial_get_char);
-stdin = srv_serial_stream ;
-stdout = srv_serial_stream ;
-printf("srv_serial Started\n");
+Serial.begin(9600); // setam viteza de comunicatie (9600 simboluri pe secunda)
+FILE *srv_serial_stream = fdevopen(ddSerialPutChar,
+ddSerialGetChar); // asociem functiile de citire/scriere cu un flux
+stdin = srv_serial_stream ; // redirectionam intrarea standard
+stdout = srv_serial_stream ; // redirectionam iesirea standard
+printf("srvSerial Started\n"); // mesaj de confirmare
 }

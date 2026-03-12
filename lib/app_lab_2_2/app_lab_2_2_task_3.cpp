@@ -1,10 +1,9 @@
 #include "app_lab_2_2_task_3.h"
-#include "srv_serial_stdio/srv_serial_stdio.h"
+#include "../dd_serial_stdio/dd_serial_stdio.h"
 #define TASK_3_REC 200
 #define TASK_3_OFFSET 100
 //task 3
-//каждые 200 мс читает буфер и отображает считанные байты в терминале через
-STDIO
+//каждые 200 мс читает буфер и отображает считанные байты в терминале через STDIO
 //При обнаружении байта 0 — переходит на новую строку.
 extern QueueHandle_t xQueue;
 void task_3(void *pvParameters)
