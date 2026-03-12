@@ -8,7 +8,7 @@
 char task_message[64] = " ";
 void app_lab_2_1_task1_setup()
 {
-printf("TASK1: Настройка\n");
+printf("TASK1: Setting up\n");
 }
 void app_lab_2_1_task1_loop(led_t* led, button_t* btn)
 {
@@ -23,7 +23,7 @@ scanf("%d", &btn_val); // Read '1' (pressed) or '0' (released)
 if(btn_val == 1)
 {
 //printf("TASK1: Кнопка нажата\n");
-strcpy(task_message, "нажата");
+strcpy(task_message, "pressed");
 if (!was_pressed) {
     ledToggle(led);
 }
@@ -31,7 +31,7 @@ if (!was_pressed) {
 else
 {
 //printf("TASK1: Кнопка отпущена\n");
-strcpy(task_message, "отпущена");
+strcpy(task_message, "released");
 }
 was_pressed = (btn_val == 1);
 /*while(my_button_is_pressed());//в этом случае программа бы застряла и

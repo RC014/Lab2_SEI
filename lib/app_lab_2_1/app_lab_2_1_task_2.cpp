@@ -8,13 +8,13 @@ extern int led_frequency;
 char task2_message[64] = " ";
 void app_lab_2_1_task2_setup()
 {
-printf("TASK2: Настройка\n");
+printf("TASK2: Setting up\n");
 }
 void app_lab_2_1_task2_loop(led_t* led1, led_t* led2, int tick)
 {
 static int blink_counter = 0;//тики
 if (digitalRead(led1->pin) == LOW) {//если основной светодиод выключен
-strcpy(task2_message, "мигает зеленый светодиод");
+strcpy(task2_message, "Green led blinking");
 // Увеличиваем счётчик тиков
 blink_counter++;
 int interval = (100 / led_frequency) / tick;//как часто мигает светодиод
@@ -28,7 +28,7 @@ else
 led_off(led_pin2);*/
 }
 } else {
-strcpy(task2_message, "горит красный светодиод");
+strcpy(task2_message, "Red led blinking");
 ledOff(led2); // Ensure LED is off when inactive
 blink_counter = 0; // Сброс счётчика
 }

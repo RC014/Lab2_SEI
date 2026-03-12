@@ -9,7 +9,7 @@
 int led_frequency;
 void app_lab_2_1_task3_setup()
 {
-printf("TASK3: Настройка\n");
+printf("TASK3: Setting up\n");
 led_frequency = MIN_LED_FREQUENCY; // стартовое значение
 }
 void app_lab_2_1_task3_loop(button_t* btn1, button_t* btn2)
@@ -23,7 +23,7 @@ myButtonArduinoSetup(btn1, btn1->pin);
 scanf("%d", &val);
 if (val == 1 && !btn1_was_pressed) {
     if (led_frequency < MAX_LED_FREQUENCY) led_frequency+=10;
-    printf("Частота увеличена\n");
+    printf("Frequency increased\n");
 }
 btn1_was_pressed = (val == 1);
 
@@ -32,7 +32,7 @@ myButtonArduinoSetup(btn2, btn2->pin);
 scanf("%d", &val);
 if (val == 1 && !btn2_was_pressed) {
     if (led_frequency > MIN_LED_FREQUENCY) led_frequency-=10;
-    printf("Частота уменьшена\n");
+    printf("Frequency decreased\n");
 }
 btn2_was_pressed = (val == 1);
 }

@@ -9,7 +9,7 @@ extern char task_message[64];
 extern char task2_message[64];
 void app_lab_2_1_setup()
 {
-srv_serial_stdio_setup();
+ddSerialStdioSetup();
 srv_os_seq_setup();
 printf("app_lab 2_1 setup\n");
 }
