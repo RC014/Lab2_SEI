@@ -5,24 +5,34 @@
 #define MIN_LED_FREQUENCY 20 // Минимальная частота
 //Задача 3 – Переменная состояния: Увеличение/уменьшение переменной при нажатии двух разных кнопок.
 //Переменная отражает количество повторений/времени,
-// в течение которого светодиод из Задачи 2 находится в определённом
-состоянии
+// в течение которого светодиод из Задачи 2 находится в определённом состоянии
 int led_frequency;
 void app_lab_2_1_task3_setup()
 {
 printf("TASK3: Настройка\n");
 led_frequency = MIN_LED_FREQUENCY; // стартовое значение
 }
-void app_lab_2_1_task3_loop(int button_pin1, int button_pin2)
+void app_lab_2_1_task3_loop(button_t* btn1, button_t* btn2)
 {
-if (my_button_is_pressed(button_pin1)) {
-if (led_frequency < MAX_LED_FREQUENCY) led_frequency+=10; //
-ограничим максимум
-printf("Частота увеличена\n");
+static bool btn1_was_pressed = false;
+static bool btn2_was_pressed = false;
+int val = 0;
+
+// Process Button 1 (Increase)
+myButtonArduinoSetup(btn1, btn1->pin);
+scanf("%d", &val);
+if (val == 1 && !btn1_was_pressed) {
+    if (led_frequency < MAX_LED_FREQUENCY) led_frequency+=10;
+    printf("Частота увеличена\n");
 }
-if (my_button_is_pressed(button_pin2)) {
-if (led_frequency > MIN_LED_FREQUENCY) led_frequency-=10; //
-ограничим минимум
-printf("Частота уменьшена\n");
+btn1_was_pressed = (val == 1);
+
+// Process Button 2 (Decrease)
+myButtonArduinoSetup(btn2, btn2->pin);
+scanf("%d", &val);
+if (val == 1 && !btn2_was_pressed) {
+    if (led_frequency > MIN_LED_FREQUENCY) led_frequency-=10;
+    printf("Частота уменьшена\n");
 }
+btn2_was_pressed = (val == 1);
 }
