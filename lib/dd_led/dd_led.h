@@ -2,8 +2,8 @@
 #define LED_H
 
 #include <stdint.h>
-#include "../../include/config.h"
 
+#define DD_LED_OUTPUT 1
 
 enum ledState{
     LED_OFF = 0,
