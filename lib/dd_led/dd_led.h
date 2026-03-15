@@ -5,13 +5,6 @@
 #include <stdint.h>
 #include "../../include/config.h"
 
-
-enum ledState{
-    LED_OFF = 0,
-    LED_ON,
-    LED_TOGGLE
-};
-
 typedef struct{
     uint8_t pin;
     void (*setOutput)(uint8_t pin, uint8_t state);

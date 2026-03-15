@@ -12,7 +12,6 @@
 
 #define APP_LAB_2_1_TSK_REC (TIME_SEC/2)/SRV_OS_SYS_TICK //ms
 
-#define TIME_SEC 10
 #ifdef __cplusplus
 extern "C" {
 #endif

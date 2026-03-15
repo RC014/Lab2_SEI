@@ -21,6 +21,7 @@
 #define TASK_REC_UI 20             // UI Tasks (Buttons) run every 20ms
 #define TASK_REC_LED 1             // LED Task runs every 1ms
 #define APP_LAB_2_1_TSK_OFFSET 0   // Initial offset
+#define TIME_SEC 10
 
 #define OS_TIMER_PRESCALER 3       // 3 = Prescaler 64 (for AVR)
 #define OS_TIMER_ADJUSTMENT 249    // 16MHz / 64 / 1000Hz - 1 = 249
@@ -30,6 +31,12 @@
 
 // Led Frequency COnfiguration
 #define MAX_LED_FREQUENCY 100      // Максимальная частота
-#define MIN_LED_FREQUENCY 0       // Минимальная частота
+#define MIN_LED_FREQUENCY 2       // Минимальная частота
+
+enum ledState{
+    LED_OFF = 0,
+    LED_ON,
+    LED_TOGGLE
+};
 
 #endif
