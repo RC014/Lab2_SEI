@@ -1,11 +1,8 @@
 #include "dd_button.h"
 #include <Arduino.h>
 
-// Static reference to the active button for the stdin callback
-// (Needed because standard FILE get/put callbacks don't always pass context in all AVR libc versions)
 static button_t* active_stdin_button = NULL;
 
-// Helper function that acts as the 'get' method for the stdio stream
 static int button_getchar(FILE *stream) {
     if (!active_stdin_button || !active_stdin_button->readPin) {
         return _FDEV_EOF;
@@ -64,8 +61,4 @@ void myButtonArduinoSetup(button_t* btn, uint8_t pin) {
     
     // Call generic setup to configure function pointers and stdio
     myButtonSetup(btn, arduino_readPin);
-    
-    // Optional: Log initialization
-    // Note: Since we just hijacked stdin, stdout (Serial) should still work for printf
-    printf("Button on pin %d configured as stdin stream.\n", pin);
 }

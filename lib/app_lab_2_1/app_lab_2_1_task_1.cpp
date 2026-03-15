@@ -4,11 +4,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <Arduino.h>
+
+
 //Таск 1: изменение состояния светодиода по нажатию кнопки.
-char task_message[64] = " ";
+char task_message[TASK_MSG_BUFFER_SIZE] = " ";
 void app_lab_2_1_task1_setup()
 {
-printf("TASK1: Setting up\n");
 }
 void app_lab_2_1_task1_loop(led_t* led, button_t* btn)
 {
@@ -18,12 +19,12 @@ static bool was_pressed = false;
 myButtonArduinoSetup(btn, btn->pin);
 
 int btn_val = 0;
-scanf("%d", &btn_val); // Read '1' (pressed) or '0' (released)
+scanf("%1d", &btn_val); // Read exactly 1 char to prevent infinite loop
 
 if(btn_val == 1)
 {
 //printf("TASK1: Кнопка нажата\n");
-strcpy(task_message, "pressed");
+sprintf(task_message, "pressed");
 if (!was_pressed) {
     ledToggle(led);
 }
@@ -31,13 +32,7 @@ if (!was_pressed) {
 else
 {
 //printf("TASK1: Кнопка отпущена\n");
-strcpy(task_message, "released");
+sprintf(task_message, "released");
 }
 was_pressed = (btn_val == 1);
-/*while(my_button_is_pressed());//в этом случае программа бы застряла и
-напрасно тратила процессорное время
-printf("Кнопка отпущена\n");
-//led_off(RED_LED);
-delay(300);//debounce delay
-*/
 }

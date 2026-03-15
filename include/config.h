@@ -2,26 +2,34 @@
 #define CONFIG_H
 
 // LED Pins
-#define RED_LED 12   // numarul 12 este pinul fizic de pe placa arduino pentru ledul rosu
-#define GREEN_LED 11 // numarul 11 este pinul fizic de pe placa arduino pentru ledul verde
+#define RED_LED 3    // numarul 3 este pinul fizic de pe placa arduino pentru ledul rosu
+#define GREEN_LED 2  // numarul 2 este pinul fizic de pe placa arduino pentru ledul verde
 
-// LCD I2C Configuration
-#define I2C_ADDR 0x27    // Adresa I2C a ecranului LCD
-#define LCD_COLUMNS 16   // Numarul de coloane al ecranului LCD
-#define LCD_ROWS 2       // Numarul de randuri al ecranului LCD
+// Button Pins
+#define RED_BUTTON_PIN 10
+#define INC_BUTTON_PIN 8
+#define DEC_BUTTON_PIN 9
 
-// Keypad Configuration
-#define KEYPAD_ROWS 4    // Numarul de randuri al tastaturii
-#define KEYPAD_COLS 4    // Numarul de coloane al tastaturii
+// System Configuration
+#define SYSTEM_TIMER TIMER_DEFAULT // Timer to be used by the OS
 
-// Keypad Pin Definitions
-#define KEYPAD_R1_PIN 0
-#define KEYPAD_R2_PIN 1
-#define KEYPAD_R3_PIN 2
-#define KEYPAD_R4_PIN 3
-#define KEYPAD_C1_PIN 4
-#define KEYPAD_C2_PIN 5
-#define KEYPAD_C3_PIN 6
-#define KEYPAD_C4_PIN 7
+// Task Configuration
+#define TASK_MSG_BUFFER_SIZE 64    // Size of the message buffer for Task 1
+
+// OS Configuration
+#define SRV_OS_SYS_TICK 1          // System tick value passed to tasks (1ms)
+#define TASK_REC_UI 20             // UI Tasks (Buttons) run every 20ms
+#define TASK_REC_LED 1             // LED Task runs every 1ms
+#define APP_LAB_2_1_TSK_OFFSET 0   // Initial offset
+
+#define OS_TIMER_PRESCALER 3       // 3 = Prescaler 64 (for AVR)
+#define OS_TIMER_ADJUSTMENT 249    // 16MHz / 64 / 1000Hz - 1 = 249
+
+// Driver Configuration
+#define DD_LED_OUTPUT 1            // Configures LED pin as output
+
+// Led Frequency COnfiguration
+#define MAX_LED_FREQUENCY 100      // Максимальная частота
+#define MIN_LED_FREQUENCY 0       // Минимальная частота
 
 #endif
