@@ -8,9 +8,11 @@
 #include "stdio.h"
 #include <stdarg.h>
 
+#include "../../include/config.h"
+
 int dd_serial_put_char(char ch, FILE *f);
 int dd_serial_get_char(FILE *f);
-void safe_printf(const char* format, ...);
+void safe_printf(const char *format, ...);
 void dd_serial_stdio_setup();
 
 #endif

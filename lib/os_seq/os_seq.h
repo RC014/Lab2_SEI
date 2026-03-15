@@ -10,14 +10,16 @@
 #include "../dd_led/dd_led.h"
 #include "../dd_button/dd_button.h"
 
-#define APP_LAB_2_1_TSK_REC (TIME_SEC/2)/SRV_OS_SYS_TICK //ms
+#define APP_LAB_2_1_TSK_REC (TIME_SEC / 2) / SRV_OS_SYS_TICK // ms
 
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
-void timer_handle_interrupts(int timer);
+    void timer_handle_interrupts(int timer);
 #ifdef __cplusplus
 }
 #endif
 void srv_os_seq_setup();
+
 #endif /* SRV_OS_SEQ_H */

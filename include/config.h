@@ -1,6 +1,9 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+//Viteza serial
+#define SERIAL_BAUDRATE 9600
+
 // LED Pins
 #define RED_LED 3    // numarul 3 este pinul fizic de pe placa arduino pentru ledul rosu
 #define GREEN_LED 2  // numarul 2 este pinul fizic de pe placa arduino pentru ledul verde
