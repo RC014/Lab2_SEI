@@ -1,10 +1,5 @@
 #include "os_seq.h"
-#include "../../include/config.h"
-#include "../app_lab_2_1/app_lab_2_1_task_1.h"
-#include "../app_lab_2_1/app_lab_2_1_task_2.h"
-#include "../app_lab_2_1/app_lab_2_1_task_3.h"
-#include "../dd_led/dd_led.h"
-#include "../dd_button/dd_button.h"
+
 int app_lab_2_1_tsk1_cnt = APP_LAB_2_1_TSK_OFFSET;
 int app_lab_2_1_tsk2_cnt = APP_LAB_2_1_TSK_OFFSET;
 int app_lab_2_1_tsk3_cnt = APP_LAB_2_1_TSK_OFFSET;

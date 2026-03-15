@@ -1,5 +1,4 @@
 #include "dd_led.h"
-#include <Arduino.h>
 
 // Functii helper statice pentru platforma Arduino
 static void arduino_setOutput(uint8_t pin, uint8_t state) {

@@ -1,8 +1,13 @@
 #ifndef DD_SERIAL_STDIO_H_
 #define DD_SERIAL_STDIO_H_
+
 #include <stdio.h>
 #include <Arduino_FreeRTOS.h>
-#include "semphr.h"
+#include <semphr.h>
+#include "Arduino.h"
+#include "stdio.h"
+#include <stdarg.h>
+
 int dd_serial_put_char(char ch, FILE *f);
 int dd_serial_get_char(FILE *f);
 void safe_printf(const char* format, ...);

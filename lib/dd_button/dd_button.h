@@ -1,6 +1,7 @@
 #ifndef DD_BUTTON_H
 #define DD_BUTTON_H
 
+#include <Arduino.h>
 #include <stdint.h>
 #include <stdio.h>
 

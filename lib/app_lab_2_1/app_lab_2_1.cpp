@@ -1,8 +1,5 @@
 #include "app_lab_2_1.h"
-#include <Arduino.h>
-#include "../dd_serial_stdio/dd_serial_stdio.h"
-#include "../os_seq/os_seq.h"
-//#include "app_lab_2_1_task_1.h"
+
 #define TIMER_DEFAULT 0
 extern int led_frequency;
 extern char task_message[TASK_MSG_BUFFER_SIZE];

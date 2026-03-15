@@ -1,6 +1,7 @@
 #ifndef LED_H
 #define LED_H
 
+#include <Arduino.h>
 #include <stdint.h>
 #include "../../include/config.h"
 

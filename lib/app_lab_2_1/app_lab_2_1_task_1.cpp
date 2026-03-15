@@ -1,10 +1,4 @@
 #include "app_lab_2_1_task_1.h"
-#include "../dd_led/dd_led.h"
-#include "../dd_button/dd_button.h"
-#include <stdio.h>
-#include <string.h>
-#include <Arduino.h>
-
 
 //Таск 1: изменение состояния светодиода по нажатию кнопки.
 char task_message[TASK_MSG_BUFFER_SIZE] = " ";

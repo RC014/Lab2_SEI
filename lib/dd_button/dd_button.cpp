@@ -1,5 +1,4 @@
 #include "dd_button.h"
-#include <Arduino.h>
 
 static button_t* active_stdin_button = NULL;
 

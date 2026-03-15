@@ -1,8 +1,5 @@
 #include "app_lab_2_1_task_2.h"
-#include "../dd_led/dd_led.h"
-#include <stdio.h>
-#include <string.h>
-#include <Arduino.h>
+
 //Таск 2 – Мигающий светодиод: Управление мигающим светодиодом, который активен только тогда, когда светодиод из Задачи 1 выключен.
 extern int led_frequency;
 char task2_message[TASK_MSG_BUFFER_SIZE] = " ";

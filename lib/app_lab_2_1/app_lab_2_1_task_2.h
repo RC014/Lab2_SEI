@@ -3,6 +3,9 @@
 
 #include "../dd_led/dd_led.h"
 #include "../../include/config.h"
+#include <stdio.h>
+#include <string.h>
+#include <Arduino.h>
 
 void app_lab_2_1_task2_setup();
 void app_lab_2_1_task2_loop(led_t* led_pin1, led_t* led_pin2, int tick);

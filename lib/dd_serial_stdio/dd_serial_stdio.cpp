@@ -1,7 +1,5 @@
 #include "dd_serial_stdio.h"
-#include "Arduino.h"
-#include "stdio.h"
-#include <stdarg.h>
+
 extern SemaphoreHandle_t xPrintfMutex;
 int dd_serial_get_char(FILE *f)
 {
