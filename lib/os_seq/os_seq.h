@@ -15,7 +15,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-void timer_handle_interrupts(int timer); // <-- оставляем оригинальное имя
+void timer_handle_interrupts(int timer);
 #ifdef __cplusplus
 }
 #endif
