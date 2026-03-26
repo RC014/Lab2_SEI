@@ -33,8 +33,8 @@
 #define DD_LED_OUTPUT 1            // Configures LED pin as output
 
 // Led Frequency COnfiguration
-#define MAX_LED_FREQUENCY 100      // Максимальная частота
-#define MIN_LED_FREQUENCY 2       // Минимальная частота
+#define MAX_LED_FREQUENCY 100      
+#define MIN_LED_FREQUENCY 2       
 
 enum ledState{
     LED_OFF = 0,
